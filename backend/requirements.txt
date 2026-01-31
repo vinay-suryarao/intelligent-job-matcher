@@ -1,0 +1,54 @@
+# --- IMPORTANT: Force CPU Versions of PyTorch (Small size) ---
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# --- Server & Core ---
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+gunicorn                         # Added this (Required for Render)
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+email-validator>=2.0.0
+
+# --- Database & Firebase ---
+firebase-admin>=6.4.0
+pinecone-client>=3.0.0           # Pinecone SDK
+
+# --- AI & ML (Optimized) ---
+torch>=2.0.0                     # Will use CPU version now
+sentence-transformers>=2.2.2
+numpy>=1.24.0
+scikit-learn>=1.3.0
+
+# --- Resume Parsing ---
+PyPDF2>=3.0.1
+pdfplumber>=0.10.0
+python-docx>=1.1.0
+
+# --- Authentication ---
+passlib[bcrypt]>=1.7.4
+python-jose[cryptography]>=3.3.0
+python-multipart>=0.0.6
+
+# --- Web Scraping & Utils ---
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+httpx>=0.26.0
+python-json-logger>=2.0.0
+apscheduler==3.10.4
+
+# --- Email ---
+aiosmtplib>=3.0.0
+
+# --- Testing ---
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+# --- Chatbot / LangChain ---
+langchain
+langchain-community
+langchain-core
+langchain-groq
+langchain-pinecone
+langchain-text-splitters

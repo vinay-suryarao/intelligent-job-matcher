@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  /* Yeh default system fonts ka stack hai */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc; /* Slate-50 background for dashboard look */
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+@keyframes shimmer {
+  0% { transform: translateX(-150%); }
+  100% { transform: translateX(150%); }
+}
+
+@keyframes scroll-line {
+  0% { transform: translateY(-100%); }
+  50% { transform: translateY(100%); }
+  100% { transform: translateY(200%); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes scroll-companies {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 4s infinite linear;
+}
+
+.animate-scroll-line {
+  animation: scroll-line 2.5s infinite ease-in-out;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-gradient {
+  background-size: 200% auto;
+  animation: gradient 3s ease infinite;
+}
+
+.animate-scroll-companies {
+  animation: scroll-companies 60s linear infinite;
+}

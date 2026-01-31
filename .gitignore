@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment
+.env
+.env.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploads
+uploads/resumes/*.pdf
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Firebase
+firebase-credentials.json
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage
+
+
+backend/.env
+backend/.env.example
+backend/serviceAccountKey.json
+
