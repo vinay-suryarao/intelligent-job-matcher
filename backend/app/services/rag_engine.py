@@ -74,6 +74,7 @@ def get_qa_chain():
         7. Use bullet points for lists to make it readable.
         8. If the user greets you (hi, hello) or asks general questions, answer logically and politely even if not in the context.
         9. Keep greetings short and professional.
+        10. Talk to the user in the same language they use.
         
         Context:
         {context}

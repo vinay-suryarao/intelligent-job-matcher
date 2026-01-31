@@ -85,7 +85,7 @@ const Dashboard = () => {
           <div>
             <h1 className="text-5xl font-black text-brand-dark tracking-tighter uppercase mb-2">Dashboard</h1>
             <p className="text-slate-400 font-medium text-lg">
-              Welcome back, <span className="text-brand-accent font-bold">{profile?.full_name || user?.full_name || 'User'}</span>
+              Welcome back, <span className="text-brand-accent font-bold">{profile?.user?.full_name || user?.full_name || 'User'}</span>
             </p>
           </div>
           <button onClick={fetchAllData} className="p-3 rounded-2xl bg-white text-brand-dark hover:bg-brand-accent hover:text-white transition-all shadow-sm">
@@ -136,20 +136,20 @@ const Dashboard = () => {
                 <Zap className="text-brand-accent" size={24} />
               </div>
               <div>
-                <p className="text-3xl font-black text-brand-dark">{profile?.skills?.length || 0}</p>
+                <p className="text-3xl font-black text-brand-dark">{profile?.user?.skills?.length || 0}</p>
                 <p className="text-slate-400 font-bold text-sm uppercase tracking-wider">Your Skills</p>
               </div>
             </div>
           </div>
         </div>
 
-        {profile?.skills && profile.skills.length > 0 && (
+        {profile?.user?.skills && profile.user.skills.length > 0 && (
           <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 mb-10">
             <h2 className="text-xl font-black text-brand-dark uppercase tracking-tight mb-4 flex items-center gap-2">
               <Award className="text-brand-accent" size={20} /> Your Skills
             </h2>
             <div className="flex flex-wrap gap-2">
-              {profile.skills.map((skill, i) => (
+              {profile.user.skills.map((skill, i) => (
                 <span key={i} className="px-4 py-2 bg-brand-bg text-brand-dark rounded-xl font-bold text-sm border border-slate-200">
                   {skill}
                 </span>
